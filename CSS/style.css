@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color : #F2E9D8;
+    font-family: Pretendard-Regular;
+    font-size : 16px;
+    font-weight: 400;
+}
+
+#main [class $= "cat"]{
+    border-radius : 30px;
+    box-shadow: 10px 10px 30px rgb(0, 0, 0, 0.25);
+}
+
+/*header styles*/
+
+#header {
+    height : 900px;
+    padding : 30px 15% 0px 15%;
+}
+
+.top-navigation-bar {
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-logo {
+    width : 130px;
+    hieght : 40px;
+}
+
+.top-navigation-right {
+    display: flex;
+    align-items: center;
+}
+
+.top-navigation-txts {
+    display: flex;
+    justify-content: space-between;
+    width : 205px;
+    margin-right : 49px;
+    font-family: Pretendard-Regular;
+    font-size : 16px;
+    font-weight: 400;
+}
+
+.head-txt-01 {
+    font-size : 48px;
+    font-weight : 700;
+}
+
+.top-imgs-txt-01, .top-map-txt,
+.subscribe-txt-01, .txt-main-top-01 {
+    font-size : 36px;
+    font-weight : 700;
+}
+
+.header-box {
+    margin-top : 84px;
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+    width : 100%;
+
+
+}
+
+.box-hat-cat {
+    width : 415px;
+    height: 766px;
+}
+
+.head-txt-02 {
+    margin-top : 40px;
+}
+
+.btn-download-02 {
+    margin-top : 40px;
+}
+
+#main {
+    background-color : #FFFFFF;
+    width : 100%;
+    padding : 80px 15% 0px 15%;
+}
+
+.main-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.lying-down-cat {
+    width : 660px;
+    height: 390px;
+
+}
+
+.main-top-txts {
+    padding-right : 30%;
+}
+
+.txt-main-top-02 {
+    margin-top : 30px;
+}
+
+.main-txts {
+    text-align: center;
+    margin : 120px 0px 0px -10%;
+    max-width : 100%;
+}
+
+
+.top-imgs-txt-01, .top-imgs-txt-02 > span {
+    color : #D97652;
+}
+
+.top-imgs-txt-02 {
+    margin-top : 40px;
+}
+
+.main-imgs {
+    margin-top : 88px;
+}
+
+
+button {
+    border : none;
+    background-color: #D97652;
+    color : #FFFFFF;
+    border-radius : 40px;
+    width : 140px;
+    height : 50px;
+    font-size : 16px;
+    font-weight: 700;
+}
+
+
+input {
+    background-image: url("../media/mail.png");
+    background-repeat: no-repeat;
+}
+
+#map {
+    width:100%;
+    height:350px;
+}
