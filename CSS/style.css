@@ -6,13 +6,14 @@
 }
 
 body {
-    background-color : #F2E9D8;
     font-family: Pretendard-Regular;
     font-size : 16px;
     font-weight: 400;
 }
 
-#main [class $= "cat"]{
+#main [class $= "cat"]:not(.lying-down-cat){
+    width : 378px;
+    height : 378px;
     border-radius : 30px;
     box-shadow: 10px 10px 30px rgb(0, 0, 0, 0.25);
 }
@@ -21,13 +22,16 @@ body {
 
 #header {
     height : 900px;
-    padding : 30px 15% 0px 15%;
+    padding-top : 30px;
+    background-color : #F2E9D8;
+    padding-left : 15%;
 }
 
 .top-navigation-bar {
     display : flex;
     align-items: center;
     justify-content: space-between;
+    padding-right : 15%;
 }
 
 .top-logo {
@@ -50,9 +54,14 @@ body {
     font-weight: 400;
 }
 
+.top-navigation-txts li:hover {
+    font-weight: 700;
+}
+
 .head-txt-01 {
     font-size : 48px;
     font-weight : 700;
+    line-height: 60px;
 }
 
 .top-imgs-txt-01, .top-map-txt,
@@ -67,17 +76,17 @@ body {
     align-items: center;
     justify-content: space-between;
     width : 100%;
-
-
 }
 
 .box-hat-cat {
     width : 415px;
     height: 766px;
+    padding-right : 15%;
 }
 
 .head-txt-02 {
     margin-top : 40px;
+    line-height: 20px;
 }
 
 .btn-download-02 {
@@ -85,37 +94,44 @@ body {
 }
 
 #main {
-    background-color : #FFFFFF;
-    width : 100%;
-    padding : 80px 15% 0px 15%;
+    width : 80%;
+    padding-top : 80px;
+    background-color: #FFFFFF;
+    padding-left : 15%;
 }
 
 .main-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-
 }
 
 .lying-down-cat {
     width : 660px;
     height: 390px;
-
+    border-radius : 30px;
+    box-shadow: 10px 10px 30px rgb(0, 0, 0, 0.25);
 }
 
 .main-top-txts {
-    padding-right : 30%;
+    padding-right : 10%;
+}
+
+.txt-main-top-01 {
+    line-height: 45px;
 }
 
 .txt-main-top-02 {
     margin-top : 30px;
+    line-height: 20px;
 }
 
 .main-txts {
     text-align: center;
     margin : 120px 0px 0px -10%;
     max-width : 100%;
+    text-align: center;
+    padding-left : 5%;
 }
 
 
@@ -125,11 +141,22 @@ body {
 
 .top-imgs-txt-02 {
     margin-top : 40px;
+    line-height: 20px;
 }
 
 .main-imgs {
     margin-top : 88px;
+    text-align: center;
+    padding-right : 10%;
 }
+
+.main-imgs-group {
+    display : flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    gap : 76px;
+}
+
 
 
 button {
@@ -143,13 +170,229 @@ button {
     font-weight: 700;
 }
 
-
-input {
-    background-image: url("../media/mail.png");
-    background-repeat: no-repeat;
+button:hover {
+    font-weight : 800;
 }
 
+.show-more {
+    text-align: center;
+    margin : 100px 0px 0px -13%;
+    max-width : 100%;
+    padding-left : 8%;
+}
+
+.show-more-txt {
+    font-size : 24px;
+    font-weight : 700;
+    margin-bottom : 28px;
+}
+
+.btn-close-scroll {
+    display: none;
+    margin : 50px 0px 0px 50%;
+    transform : translate(-50%, -50%);
+}
+
+.division-line {
+    width : 70%;
+    height : 1px;
+    margin : 80px 0px 68px 15%;
+    background-color: rgba(196, 196, 196, 0.6);
+}
+
+.map-box {
+    padding : 68px 15% 0px 15%;
+}
+
+.top-map-txt {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.top-map-place {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(96, 99, 103, 1);
+    margin : 20px 0 48px 0px;
+}
+
+
 #map {
-    width:100%;
-    height:350px;
+    height:520px;
+    border-radius : 12px;
+    position : relative;
+    left : 0;
+
+}
+
+#subscribe {
+    margin-top: 80px;
+    margin-left: 15%;
+    width: 70%;
+    position: absolute;
+}
+
+.subscribe-box {
+    display : flex;
+    justify-content: space-between;
+    background-color: #263140;
+    color : #FFFFFF;
+    padding : 50px 58px 50px 58px;
+    border-radius : 30px;
+}
+
+.subscribe-txt-02 {
+    font-size : 14px;
+    font-weight : 400;
+    color : #F2E9D8;
+    margin-top : 18px;
+    line-height: 18px;
+}
+
+.email-box {
+    width: 530px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    padding : 18px 6px 18px 28px;
+    box-sizing : border-box;
+    display: flex;
+    margin-top : 18px;
+}
+
+.input-email {
+    border: none;
+    margin-left :-100px;
+    font-size : 16px;
+    color : #767676;
+}
+
+.btn-subscribe {
+    margin-top : -13px;
+
+}
+
+.cat-eyes-box {
+    margin-top : 180px;
+    max-height: 340px;
+    overflow: hidden;
+    position : relative;
+    z-index: -1;
+}
+
+.cat-eyes {
+    width : 100%;
+    max-height: initial;
+    margin-top: -20%;
+}
+
+#footer {
+    background-color: #FFFFFF;
+    padding : 45px 0px 45px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-hodu-logo {
+    width : 226px;
+    height : 70px;
+}
+
+#footer ul {
+    display: flex;
+    width : 228px;
+    height : 42px;
+    justify-content: space-around;
+    margin-top : 15px;
+
+}
+
+#footer .sns-btn button {
+    width : 42px;
+    height : 42px;
+    background-color : #F29D52;
+}
+
+#footer .sns-btn button img {
+    width : 24px;
+    height: 24px;
+    margin: 3px 0px 0px 1px;
+}
+
+.scroll-btn {
+    width : 50px;
+    height : 50px;
+    border : 1px solid #C4C4C4;
+    background-color : #FFFFFF;
+    border-radius : 100px;
+    opacity: 80%;
+    position : fixed;
+    top : 90%;
+    left : 95%;
+}
+
+.arrow-up {
+    width : 40px;
+    height : 40px;
+    margin-left : 5px;
+    margin-top : 4px;
+}
+
+.scroll-btn:hover {
+    opacity: 1;
+}
+
+#modal {
+    display : none;
+    width : 600px;
+    height : 400px;
+    text-align: center;
+    position: absolute;
+    padding : 60px 100px 40px 100px;
+    background-image: url("../media/modal_bg.png");
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    border-radius: 30px;
+    z-index : 100;
+    top : 4000px;
+    left: 50%;
+    transform : translate(-50%, -50%);
+}
+
+.modal-inner-contents {
+    position : absolute;
+}
+
+.modal-thanks {
+    font-size : 36px;
+    font-weight: 700;
+    color : #D97652;
+    margin-top : 24px;
+}
+
+.modal-explain {
+    font-size : 14px;
+    margin-top : 12px;
+}
+
+.modal-btn {
+    width : 183px;
+    height : 50px;
+    margin-top : 38px;
+}
+
+#infinite-scroll {
+    display : none;
+    margin-top : 50px;
+    /*border : 1px solid red;*/
+    margin-right : 10%;
+}
+
+.infinite-scroll-list {
+    list-style: none;
+}
+
+.infinite-scroll-list li img {
+    width : 100%;
 }
