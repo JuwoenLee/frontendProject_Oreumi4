@@ -115,6 +115,7 @@ body {
 
 .main-top-txts {
     padding-right : 10%;
+    margin-left : 30px;
 }
 
 .txt-main-top-01 {
@@ -157,7 +158,9 @@ body {
     gap : 76px;
 }
 
-
+.main-imgs-group img:hover {
+    transform: scale(1.1);
+}
 
 button {
     border : none;
@@ -262,10 +265,16 @@ button:hover {
 }
 
 .input-email {
+    background-image: url("../media/mail.png");
+    background-repeat: no-repeat;
     border: none;
-    margin-left :-100px;
+    padding-left : 30px;
     font-size : 16px;
     color : #767676;
+}
+
+input-email::placeholder {
+    font-family: Pretendard-Regular;
 }
 
 .btn-subscribe {
@@ -305,7 +314,12 @@ button:hover {
     height : 42px;
     justify-content: space-around;
     margin-top : 15px;
+}
 
+#footer .sns-btn {
+    display : flex;
+    width : 228px;
+    justify-content: space-between;
 }
 
 #footer .sns-btn button {
