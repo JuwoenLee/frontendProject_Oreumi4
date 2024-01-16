@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-<div id="header">
+<section id="header">
     <div class="top-navigation-bar">
-        <img src="media/Group.png" class="top-logo" alt="HODU-logo">
+        <img src="media/Group.png" class="img-top-logo" alt="HODU-logo">
         <div class="top-navigation-right">
             <ul class="top-navigation-txts">
                 <li>Home</li>
@@ -35,12 +35,11 @@
             <button class="btn-download-02">Download</button>
         </div>
         <img src="media/img_cat_png.png" alt="box-hat-cat" class="box-hat-cat">
-
     </div>
-</div>
+</section>
 
-<div id="main">
-    <div class="main-top">
+<section id="main">
+    <section class="main-top">
         <img src="media/img_4.png" alt="lying-down-cat" class="lying-down-cat">
         <div class="main-top-txts">
             <p class="txt-main-top-01">
@@ -52,17 +51,17 @@
                 Lorem Ipsum is simply dummy text of the printing and typesetting<br>industry.
             </p>
         </div>
-    </div>
+    </section>
 
-    <div class="main-txts">
-        <p class="top-imgs-txt-01">dummy text of the printing and dummy</p>
-        <p class="top-imgs-txt-02">
+    <section class="main-center-txts">
+        <p class="main-center-txt-01">dummy text of the printing and dummy</p>
+        <p class="main-center-txt-02">
             Lorem Ipsum is simply <span>dummy text</span> of the printing and typesetting industry.<br>
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
         </p>
-    </div>
+    </section>
 
-    <div class="main-imgs">
+    <section class="main-imgs">
         <div class="main-imgs-group">
             <img src="media/img_1.png" alt="main-top-cat" class="main-top-cat">
             <img src="media/img_2.png" alt="main-top-cat" class="main-top-cat">
@@ -72,33 +71,32 @@
             <img src="media/img_2-1.png" alt="main-bottom-cat" class="main-bottom-cat">
             <img src="media/img_3-1.png" alt="main-bottom-cat" class="main-bottom-cat">
         </div>
-    </div>
+    </section>
 
-    <div class="show-more">
+    <section class="show-more">
         <p class="show-more-txt">Continue exploring HODU</p>
         <button class="btn-show-more">Show more</button>
-    </div>
+    </section>
 
-    <div id="infinite-scroll">
+    <section id="infinite-scroll">
         <ul class="infinite-scroll-list">
 
         </ul>
 
         <button class="btn-close-scroll">Close</button>
+    </section>
+</section>
+
+<div class="division-line"></div>
+
+<section id="map">
+    <p class="map-top-txt-01">Where you'll be</p>
+    <p class="map-top-txt-02">Click on the map!!</p>
+    <div class="map-box">
     </div>
-</div>
+</section>
 
-<div class="division-line">
-</div>
-
-<div class="map-box">
-    <p class="top-map-txt">Where you'll be</p>
-    <p class="top-map-place">지도에서 클릭</p>
-    <div id="map">
-    </div>
-</div>
-
-<div id="subscribe">
+<section id="subscribe">
     <div class="subscribe-box">
         <div class="subscribe-txts">
             <p class="subscribe-txt-01">Subscribe to our Blog post</p>
@@ -112,17 +110,17 @@
             <button class="btn-subscribe" type="submit">Subscribe</button>
         </div>
     </div>
-</div>
+</section>
 <div class="cat-eyes-box">
     <img src="media/img_5.png" alt="cat's-eyes" class="cat-eyes">
 </div>
 
-<div class="scroll-btn">
+<div class="btn-back-to-top">
     <img src="media/keyboard_arrow_up.png" alt="arrow-up" class="arrow-up">
 </div>
 
 
-<div id="footer">
+<section id="footer">
     <img src="media/Group.png" alt="HODU-logo" class="footer-hodu-logo">
     <div class="sns-btn">
         <button class="btn-blog"onclick="window.open('https://www.notion.so/ko-kr')"><img src="media/blog.png"></button>
@@ -130,18 +128,18 @@
         <button class="btn-facebook"onclick="window.open('https://www.facebook.com/?locale=ko_KR')"><img src="media/facebook.png"></button>
         <button class="btn-youtube" onclick="window.open('https://www.youtube.com/')"><img src="media/youtube.png"></button>
     </div>
-</div>
+</section>
 
 <div id="modal">
     <div class="modal-inner-contents">
         <img src="media/modal_cat.png">
         <p class="modal-thanks">Thank you!</p>
         <p class="modal-explain">Lorem Ipsum is simply dummy text of the printing industry. </p>
-        <button type="submit" class="modal-btn">OK! I Love HODU</button>
+        <button type="submit" class="btn-modal">OK! I Love HODU</button>
     </div>
 </div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ed95c5df693767a255648a7b6bd5919&libraries=services"></script>
-<script src="hoduJS.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
