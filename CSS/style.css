@@ -23,8 +23,7 @@ body {
 #header .top-navigation-bar {
     display : flex;
     align-items: center;
-    width : 70%;
-    margin-left : 4%;
+    width : 80%;
     justify-content: space-between;
     padding-right : 15%;
 }
@@ -69,11 +68,6 @@ body {
 #header .btn-download-02 {
     margin-top : 40px;
     transform : translate(-50px, -50px);
-}
-
-.top-map-txt {
-    font-size : 36px;
-    font-weight : 700;
 }
 
 #header .header-box {
@@ -248,7 +242,7 @@ button:hover {
 }
 
 #map .map-box {
-    height: 35em;
+    height: 520px;
     border-radius : 12px;
     position : relative;
 }
