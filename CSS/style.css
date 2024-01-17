@@ -23,6 +23,8 @@ body {
 #header .top-navigation-bar {
     display : flex;
     align-items: center;
+    width : 70%;
+    margin-left : 4%;
     justify-content: space-between;
     padding-right : 15%;
 }
