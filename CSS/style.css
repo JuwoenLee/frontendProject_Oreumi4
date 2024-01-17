@@ -14,7 +14,7 @@ body {
 /* ------------------------ header styles ---------------------------- */
 
 #header {
-    height : 900px;
+    height : 100%;
     padding-top : 30px;
     background-color : #F2E9D8;
     padding-left : 15%;
@@ -54,15 +54,22 @@ body {
     font-size : 48px;
     font-weight : 700;
     line-height: 60px;
+    transform : translate(-50px, -50px);
 }
 
 #header .head-txt-02 {
+    width : 60%;
     margin-top : 40px;
+    line-height: 20px;
+    transform : translate(-50px, -50px);
 }
 
-.main-center-txt-01,
-.top-map-txt,
-.txt-main-top-01 {
+#header .btn-download-02 {
+    margin-top : 40px;
+    transform : translate(-50px, -50px);
+}
+
+.top-map-txt {
     font-size : 36px;
     font-weight : 700;
 }
@@ -71,23 +78,15 @@ body {
     margin-top : 84px;
     display : flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width : 100%;
+    flex-flow : wrap;
 }
 
 #header .box-hat-cat {
     width : 415px;
     height: 766px;
     padding-right : 15%;
-}
-
-#header .main-center-txt-02 {
-    margin-top : 40px;
-    line-height: 20px;
-}
-
-#header .btn-download-02 {
-    margin-top : 40px;
 }
 
 /* -------------------------- main styles ---------------------------- */
@@ -103,11 +102,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-flow : wrap;
+    justify-content: center;
 }
 
 #main .lying-down-cat {
-    width : 660px;
-    height: 390px;
+    width : 40em;
+    height: 25em;
     border-radius : 30px;
     box-shadow: 10px 10px 30px rgb(0, 0, 0, 0.25);
 }
@@ -121,16 +122,22 @@ body {
 
 #main .main-top-txts {
     padding-right : 10%;
-    margin-left : 30px;
+    margin-left : 10%;
+    margin-top : 40px;
+
 }
 
-#main .txt-main-top-01 {
+#main .main-top-txt-01 {
     line-height: 45px;
+    font-size : 36px;
+    font-weight : 700;
 }
 
-#main .txt-main-top-02 {
+#main .main-top-txt-02 {
+    width : 90%;
     margin-top : 30px;
     line-height: 20px;
+    font-size : 16px;
 }
 
 #main .main-center-txts {
@@ -139,20 +146,27 @@ body {
     max-width : 100%;
     text-align: center;
     padding-left : 5%;
+    padding-bottom : 88px;
 }
 
-
-.main-center-txt-01, .main-center-txt-02 > span {
+#main .main-center-txt-01{
+    font-size : 48px;
+    font-weight: 700;
     color : #D97652;
 }
 
+#main .main-center-txt-02 > span {
+    color : #D97652;
+    font-weight : 700;
+}
+
 #main .main-center-txt-02 {
+    font-size : 16px;
     margin-top : 40px;
     line-height: 20px;
 }
 
 #main .main-imgs {
-    margin-top : 88px;
     text-align: center;
     padding-right : 10%;
 }
@@ -232,10 +246,9 @@ button:hover {
 }
 
 #map .map-box {
-    height:520px;
+    height: 35em;
     border-radius : 12px;
     position : relative;
-    left : 0;
 }
 
 #map .map-top-txt-01 {
@@ -266,6 +279,7 @@ button:hover {
     color : #FFFFFF;
     padding : 50px 58px 50px 58px;
     border-radius : 30px;
+    flex-flow : wrap;
 }
 #subscribe .subscribe-txt-01 {
     font-size : 36px;
@@ -281,7 +295,7 @@ button:hover {
 }
 
 #subscribe .email-box {
-    width: 530px;
+    width: 30em;
     height: 60px;
     border-radius: 60px;
     background-color: #FFFFFF;
