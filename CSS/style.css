@@ -99,7 +99,6 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-flow : wrap;
-    justify-content: center;
 }
 
 #main .lying-down-cat {
@@ -117,8 +116,7 @@ body {
 }
 
 #main .main-top-txts {
-    padding-right : 10%;
-    margin-left : 10%;
+    padding-right : 12%;
     margin-top : 40px;
 
 }
