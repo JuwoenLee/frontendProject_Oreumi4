@@ -714,7 +714,7 @@ button:hover:not(.btn-top-navigation-menu) {
     .cat-eyes-box {
         margin-top : 420px;
         overflow : visible;
-        background-image : url("media/img_5.png");
+        background-image : url("../media/img_5.png");
         background-size : 100% 100%;
     }
 
