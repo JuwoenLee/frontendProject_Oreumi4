@@ -58,7 +58,7 @@ showMoreBtn.addEventListener('click', () => {
         imageBox.style.display = "block";
         closeScrollBtn.style.display = "block";
         fetchImages();
-        window.addEventListener('scroll', throttling(infinityScroll, 3000));
+        window.addEventListener('scroll', throttling(infinityScroll, 5000));
     }
 );
 
