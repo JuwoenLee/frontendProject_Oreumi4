@@ -6,7 +6,9 @@ const showMoreBtn = document.querySelector(".btn-show-more");
 const closeScrollBtn = document.querySelector(".btn-close-scroll");
 const imageList = document.querySelector(".infinite-scroll-list");
 const imageBox = document.querySelector("#infinite-scroll");
-let pageToFetch = 1;
+const mobileMenuBtn = document.querySelector(".btn-top-navigation-menu");
+const mobileSideMenu = document.querySelector(".mobile-navigation-bar");
+const mobileMenuCloseBtn = document.querySelector(".close-arrow");
 
 async function fetchImages(){
     try {
@@ -86,4 +88,12 @@ subscribeBtn.addEventListener('click', () => {
 
 modalBtn.addEventListener('click', () => {
     modalWindow.style.display = 'none';
+});
+
+mobileMenuBtn.addEventListener('click', () => {
+    mobileSideMenu.style.display = "block";
+});
+
+mobileMenuCloseBtn.addEventListener('click', () => {
+    mobileSideMenu.style.display = "none";
 });
