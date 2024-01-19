@@ -12,6 +12,9 @@ const mobileMenuCloseBtn = document.querySelector(".close-arrow");
 const navHome = document.querySelector(".top-navigation-home");
 const navAbout = document.querySelector(".top-navigation-about");
 const navSupport = document.querySelector(".top-navigation-support");
+const mobileNavHome = document.querySelector(".mobile-navigation-home");
+const mobileNavAbout = document.querySelector(".mobile-navigation-about");
+const mobileNavSupport = document.querySelector(".mobile-navigation-support");
 
 const homePosition = document.querySelector("#header"). getBoundingClientRect().top + window.scrollY;;
 const mainPosition = document.querySelector("#main"). getBoundingClientRect().top + window.scrollY;
@@ -68,7 +71,6 @@ navAbout.addEventListener('click', () => {
 });
 
 navSupport.addEventListener('click', () => {
-    console.log(subscribePosition);
     window.scrollTo({top : subscribePosition, behavior : "smooth"});
 });
 
@@ -118,6 +120,19 @@ modalBtn.addEventListener('click', () => {
 
 mobileMenuBtn.addEventListener('click', () => {
     mobileSideMenu.style.display = "block";
+
+    mobileNavHome.addEventListener('click', () => {
+        window.scrollTo({top : homePosition, behavior : "smooth"});
+        mobileSideMenu.style.display = "none";
+    });
+    mobileNavAbout.addEventListener('click', () => {
+        window.scrollTo({top : mainPosition, behavior : "smooth"});
+        mobileSideMenu.style.display = "none";
+    });
+    mobileNavSupport.addEventListener('click', () => {
+        window.scrollTo({top : subscribePosition, behavior : "smooth"});
+        mobileSideMenu.style.display = "none";
+    });
 });
 
 mobileMenuCloseBtn.addEventListener('click', () => {
