@@ -460,12 +460,14 @@ button:hover:not(.btn-top-navigation-menu) {
     margin-top : 38px;
 }
 
-/* mobile */
+/* ------------------------ mobile styles ---------------------------- */
 
 @media screen and (max-width : 768px) {
     #body * {
         padding-left : 5%;
     }
+
+    /* -------------------- mobile header styles ------------------------- */
 
     #header {
         padding-left : 5%;
@@ -571,7 +573,7 @@ button:hover:not(.btn-top-navigation-menu) {
         margin-left : 20px;
     }
 
-    /* main */
+    /* --------------------- mobile main styles -------------------------- */
 
     #main {
         padding-left : 8%;
@@ -632,12 +634,22 @@ button:hover:not(.btn-top-navigation-menu) {
         width : 143px;
     }
 
+    #main .infinite-scroll-list {
+        margin-left : 15%;
+    }
+
+    #main .btn-close-scroll {
+        margin-left : 60%;
+    }
+
     .division-line {
         width : 326px;
         height: 1px;
         margin : 60px 0 40px 10%;
         background-color: rgba(196, 196, 196, 0.6);
     }
+
+    /* ---------------------- mobile map styles -------------------------- */
 
     #map {
         padding-top : 0;
@@ -657,6 +669,8 @@ button:hover:not(.btn-top-navigation-menu) {
         height : 132px;
         border-right: 12px;
     }
+
+    /* ------------------- mobile subscribe styles ----------------------- */
 
     #subscribe {
         margin-top : 40px;
@@ -730,9 +744,13 @@ button:hover:not(.btn-top-navigation-menu) {
         margin-left : -3px;
     }
 
+    /* -------------------- mobile footer styles ------------------------- */
+
     #footer {
         padding : 30px 20px 24px 20px;
         display : block;
+        height : 180px;
+        box-sizing : border-box;
     }
 
     #footer .footer-hodu-logo {
@@ -767,6 +785,7 @@ button:hover:not(.btn-top-navigation-menu) {
         position : absolute;
         right : 20px;
         color : #767676;
+        margin-top : 0px;
     }
 
     #footer .footer-mobile-txt-list li {
@@ -781,6 +800,8 @@ button:hover:not(.btn-top-navigation-menu) {
     #footer .footer-mobile-txt-list li a:hover {
         color : #000;
     }
+
+    /* --------------------- mobile modal styles ------------------------- */
 
     #modal {
         width : 300px;
