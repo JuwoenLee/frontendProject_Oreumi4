@@ -48,6 +48,7 @@ body {
 
 #header .top-navigation-txts li:hover {
     font-weight: 700;
+    cursor : pointer;
 }
 
 #header .head-txt-01 {
@@ -199,6 +200,7 @@ button:not(.btn-top-navigation-menu) {
 
 button:hover:not(.btn-top-navigation-menu) {
     background-color: #d73f0f;
+    cursor : pointer;
 }
 
 /* ---------------------infinite scroll styles ----------------------- */
@@ -215,6 +217,7 @@ button:hover:not(.btn-top-navigation-menu) {
 
 #infinite-scroll .infinite-scroll-list li img {
     width : 100%;
+    border-radius: 30px;
 }
 
 .show-more {
@@ -417,6 +420,7 @@ button:hover:not(.btn-top-navigation-menu) {
 
 .btn-back-to-top:hover {
     opacity: 1;
+    cursor: pointer;
 }
 
 /* -------------------------- modal styles --------------------------- */

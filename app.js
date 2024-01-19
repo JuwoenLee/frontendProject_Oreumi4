@@ -9,10 +9,18 @@ const imageBox = document.querySelector("#infinite-scroll");
 const mobileMenuBtn = document.querySelector(".btn-top-navigation-menu");
 const mobileSideMenu = document.querySelector(".mobile-navigation-bar");
 const mobileMenuCloseBtn = document.querySelector(".close-arrow");
+const navHome = document.querySelector(".top-navigation-home");
+const navAbout = document.querySelector(".top-navigation-about");
+const navSupport = document.querySelector(".top-navigation-support");
+
+const homePosition = document.querySelector("#header"). getBoundingClientRect().top + window.scrollY;;
+const mainPosition = document.querySelector("#main"). getBoundingClientRect().top + window.scrollY;
+const subscribePosition = document.querySelector(".subscribe-box"). getBoundingClientRect().top + window.scrollY;;
+
 
 async function fetchImages(){
     try {
-        const response = await fetch ('https://api.thecatapi.com/v1/images/search?limit=5');
+        const response = await fetch ('https://api.thecatapi.com/v1/images/search?limit=3');
         if (!response.ok) {
             throw new Error('network error');
         }
@@ -24,8 +32,12 @@ async function fetchImages(){
 }
 
 const infinityScroll = () => {
-    fetchImages();
-}
+    if(window.scrollY >= window.innerHeight * 0.8) {
+        fetchImages();
+    } else {
+        return;
+    }
+};
 
 const throttling = (callback, delay) => {
     let timer = null; // 클로저
@@ -46,15 +58,19 @@ function makeImageList(datas) {
     });
 }
 
-function backToTop() {
-    const position = document.documentElement.scrollTop || document.body.scrollTop;
-    if(position) {
-        window.requestAnimationFrame(() => {
-            window.scrollTo(0, position - position / 10);
-            backToTop();
-        });
-    }
-}
+navHome.addEventListener('click', () => {
+    window.scrollTo({top : homePosition, behavior : "smooth"});
+});
+
+navAbout.addEventListener('click', () => {
+    console.log(mainPosition);
+    window.scrollTo({top : mainPosition, behavior : "smooth"});
+});
+
+navSupport.addEventListener('click', () => {
+    console.log(subscribePosition);
+    window.scrollTo({top : subscribePosition, behavior : "smooth"});
+});
 
 showMoreBtn.addEventListener('click', () => {
         imageBox.style.display = "block";
@@ -76,14 +92,24 @@ window.addEventListener('scroll', () => {
     } else {
         backToTopBtn.style.display = 'none';
     }
-})
+});
 
 backToTopBtn.addEventListener('click', () => {
-    backToTop();
+    window.scrollTo({top : 0, behavior : "smooth"});
 });
 
 subscribeBtn.addEventListener('click', () => {
-    modalWindow.style.display = 'block';
+    const emailForm = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    console.log(document.querySelector(".input-email").value);
+    const inputEmail = document.querySelector(".input-email").value;
+    if(inputEmail.match(emailForm) != null) {
+        modalWindow.style.display = 'block';
+    } else {
+        alert("Your email is invalid!");
+        document.querySelector(".input-email").value = null;
+        document.querySelector(".input-email").focus();
+    }
 });
 
 modalBtn.addEventListener('click', () => {
@@ -97,3 +123,5 @@ mobileMenuBtn.addEventListener('click', () => {
 mobileMenuCloseBtn.addEventListener('click', () => {
     mobileSideMenu.style.display = "none";
 });
+
+
