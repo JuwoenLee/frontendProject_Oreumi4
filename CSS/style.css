@@ -96,7 +96,7 @@ body {
 #main .main-top {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-flow : wrap;
 }
 
@@ -115,8 +115,7 @@ body {
 }
 
 #main .main-top-txts {
-    padding-right : 11%;
-    padding-left : 10%;
+    padding-right : 10%;
     margin-top : 40px;
 
 }
