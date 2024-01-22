@@ -4,7 +4,7 @@ const modalBtn = document.querySelector(".btn-modal");
 const backToTopBtn = document.querySelector(".btn-back-to-top");
 const showMoreBtn = document.querySelector(".btn-show-more");
 const closeScrollBtn = document.querySelector(".btn-close-scroll");
-const imageList = document.querySelector(".infinite-scroll-list");
+const imageList = document.querySelector(".infinite-scroll-img-group");
 const imageBox = document.querySelector("#infinite-scroll");
 const mobileMenuBtn = document.querySelector(".btn-top-navigation-menu");
 const mobileSideMenu = document.querySelector(".mobile-navigation-bar");
@@ -23,7 +23,7 @@ const subscribePosition = document.querySelector(".subscribe-box"). getBoundingC
 
 async function fetchImages(){
     try {
-        const response = await fetch ('https://api.thecatapi.com/v1/images/search?limit=3');
+        const response = await fetch ('https://api.thecatapi.com/v1/images/search?limit=10');
         if (!response.ok) {
             throw new Error('network error');
         }
@@ -35,10 +35,10 @@ async function fetchImages(){
 }
 
 const infinityScroll = () => {
-    if(window.scrollY >= window.innerHeight * 0.8) {
+    if(document.body.clientHeight > (window.scrollY + window.innerHeight) * 0.5) {
+        console.log(document.body.clientHeight);
+        console.log((window.scrollY + window.innerHeight) * 0.5);
         fetchImages();
-    } else {
-        return;
     }
 };
 
@@ -57,7 +57,7 @@ const throttling = (callback, delay) => {
 
 function makeImageList(datas) {
     datas.forEach((item) => {
-        imageList.innerHTML += "<li><img src=" + item.url + " alt=''></li>";
+        imageList.innerHTML += "<img src=" + item.url + " alt=''>";
     });
 }
 
@@ -66,7 +66,6 @@ navHome.addEventListener('click', () => {
 });
 
 navAbout.addEventListener('click', () => {
-    console.log(mainPosition);
     window.scrollTo({top : mainPosition, behavior : "smooth"});
 });
 
@@ -78,7 +77,7 @@ showMoreBtn.addEventListener('click', () => {
         imageBox.style.display = "block";
         closeScrollBtn.style.display = "block";
         fetchImages();
-        window.addEventListener('scroll', throttling(infinityScroll, 5000));
+        window.addEventListener('scroll', throttling(infinityScroll, 1000));
     }
 );
 
