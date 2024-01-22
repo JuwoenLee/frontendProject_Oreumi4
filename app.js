@@ -52,7 +52,8 @@ async function fetchImages(){
 }
 
 const infinityScroll = () => {
-    if(document.body.clientHeight > (window.scrollY + window.innerHeight) * 0.5) {
+    if(document.body.clientHeight  * 0.6 < (window.scrollY + window.innerHeight)) {
+        console.log("load");
         fetchImages();
     }
 };
