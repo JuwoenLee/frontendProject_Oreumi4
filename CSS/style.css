@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Pretendard-Regular;
+    font-family: Pretendard-Regular, Serif, Serif, serif;
     font-size : 16px;
     font-weight: 400;
 }
@@ -15,17 +15,14 @@ body {
 
 #header {
     height : 100%;
-    padding-top : 30px;
+    padding : 30px 15% 0 15%;
     background-color : #F2E9D8;
-    padding-left : 15%;
 }
 
 #header .top-navigation-bar {
     display : flex;
     align-items: center;
-    width : 80%;
     justify-content: space-between;
-    padding-right : 15%;
 }
 
 #header .img-top-logo {
@@ -36,7 +33,6 @@ body {
     display: flex;
     justify-content: space-between;
     width : 400px;
-    font-family: Pretendard-Regular;
     font-size : 16px;
     font-weight: 400;
     align-items : center;
@@ -51,26 +47,23 @@ body {
     font-size : 48px;
     font-weight : 700;
     line-height: 60px;
-    transform : translate(-50px, -50px);
 }
 
 #header .head-txt-02 {
     width : 60%;
     margin-top : 40px;
     line-height: 20px;
-    transform : translate(-50px, -50px);
 }
 
 #header .btn-download-02 {
     margin-top : 40px;
-    transform : translate(-50px, -50px);
 }
 
 #header .header-box {
     margin-top : 84px;
     display : flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width : 100%;
     flex-flow : wrap;
 }
@@ -78,7 +71,6 @@ body {
 #header .box-hat-cat {
     width : 415px;
     height: 766px;
-    padding-right : 15%;
 }
 
 #header .btn-top-navigation-menu {
@@ -104,7 +96,7 @@ body {
 #main .main-top {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-flow : wrap;
 }
 
@@ -123,7 +115,8 @@ body {
 }
 
 #main .main-top-txts {
-    padding-right : 12%;
+    padding-right : 11%;
+    padding-left : 10%;
     margin-top : 40px;
 
 }
@@ -143,9 +136,8 @@ body {
 
 #main .main-center-txts {
     text-align: center;
-    margin : 120px 0px 0px -10%;
+    margin : 120px 0 0 -10%;
     max-width : 100%;
-    text-align: center;
     padding-left : 5%;
     padding-bottom : 88px;
 }
@@ -229,7 +221,7 @@ button:hover:not(.btn-top-navigation-menu) {
 
 .show-more {
     text-align: center;
-    margin : 100px 0px 0px -13%;
+    margin : 100px 0 0 -13%;
     max-width : 100%;
     padding-left : 8%;
 }
@@ -242,21 +234,21 @@ button:hover:not(.btn-top-navigation-menu) {
 
 #main .btn-close-scroll {
     display: none;
-    margin : 50px 0px 0px 50%;
+    margin : 50px 0 0 50%;
     transform : translate(-50%, -50%);
 }
 
 #main .division-line {
     width : 70%;
     height : 1px;
-    margin : 80px 0px 0px 15%;
+    margin : 80px 0 0 15%;
     background-color: rgba(196, 196, 196, 0.6);
 }
 
 /* ------------------------- map styles ------------------------------ */
 
 #map {
-    padding : 68px 15% 0px 15%;
+    padding : 68px 15% 0 15%;
 }
 
 #map .map-box {
@@ -274,7 +266,7 @@ button:hover:not(.btn-top-navigation-menu) {
     font-size: 16px;
     font-weight: 500;
     color: rgba(96, 99, 103, 1);
-    margin : 20px 0 48px 0px;
+    margin : 20px 0 48px 0;
 }
 
 /* ----------------------subscribe box styles ------------------------ */
@@ -330,10 +322,6 @@ button:hover:not(.btn-top-navigation-menu) {
     color : #767676;
 }
 
-#subscribe input-email::placeholder {
-    font-family: Pretendard-Regular;
-}
-
 #subscribe .btn-subscribe {
     margin-top : -13px;
 
@@ -359,7 +347,7 @@ button:hover:not(.btn-top-navigation-menu) {
 
 #footer {
     background-color: #FFFFFF;
-    padding : 45px 0px 45px 0px;
+    padding : 45px 0 45px 0;
     display: flex;
     justify-content: space-around;
 }
@@ -400,7 +388,7 @@ button:hover:not(.btn-top-navigation-menu) {
 #footer .sns-btn button img {
     width : 24px;
     height: 24px;
-    margin: 3px 0px 0px 1px;
+    margin: 3px 0 0 1px;
 }
 
 #footer .footer-mobile-txt-box {
@@ -511,7 +499,7 @@ button:hover:not(.btn-top-navigation-menu) {
     }
 
     .top-navigation-txts li {
-        padding : 15px 0px;
+        padding : 15px 0;
     }
 
     #header .btn-top-navigation-menu {
@@ -544,7 +532,7 @@ button:hover:not(.btn-top-navigation-menu) {
         display : flex;
         flex-direction: column;
         justify-content: space-between;
-        margin : 66px 0px 50px 25px;
+        margin : 66px 0 50px 25px;
     }
 
     #header .mobile-navigation-list li:hover {
@@ -677,7 +665,7 @@ button:hover:not(.btn-top-navigation-menu) {
 
     #map .map-top-txt-02 {
         line-height: 20px;
-        margin : 16px 0px 28px 0px;
+        margin : 16px 0 28px 0;
     }
 
     #map .map-box {
@@ -800,7 +788,7 @@ button:hover:not(.btn-top-navigation-menu) {
         position : absolute;
         right : 20px;
         color : #767676;
-        margin-top : 0px;
+        margin-top : 0;
     }
 
     #footer .footer-mobile-txt-list li {
