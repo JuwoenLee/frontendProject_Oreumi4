@@ -369,6 +369,10 @@ button:hover:not(.btn-top-navigation-menu) {
     height : 70px;
 }
 
+#footer .footer-hodu-logo:hover {
+    cursor: pointer;
+}
+
 #footer ul {
     display: flex;
     width : 228px;

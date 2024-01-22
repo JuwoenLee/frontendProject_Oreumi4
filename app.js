@@ -15,6 +15,7 @@ const navSupport = document.querySelector(".top-navigation-support");
 const mobileNavHome = document.querySelector(".mobile-navigation-home");
 const mobileNavAbout = document.querySelector(".mobile-navigation-about");
 const mobileNavSupport = document.querySelector(".mobile-navigation-support");
+const footerLogoImage = document.querySelector(".footer-hodu-logo");
 
 const homePosition = document.querySelector("#header"). getBoundingClientRect().top + window.scrollY;;
 const mainPosition = document.querySelector("#main"). getBoundingClientRect().top + window.scrollY;
@@ -136,6 +137,10 @@ mobileMenuBtn.addEventListener('click', () => {
 
 mobileMenuCloseBtn.addEventListener('click', () => {
     mobileSideMenu.style.display = "none";
+});
+
+footerLogoImage.addEventListener('click', () => {
+    window.scrollTo({top : 0, behavior : "smooth"});
 });
 
 
