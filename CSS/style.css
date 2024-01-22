@@ -441,14 +441,14 @@ button:hover:not(.btn-top-navigation-menu) {
     width : 600px;
     height : 400px;
     text-align: center;
-    position: relative;
+    position: fixed;
     padding : 60px 100px 40px 100px;
     background-image: url("../media/modal_bg.png");
     background-repeat: no-repeat;
     box-sizing: border-box;
     border-radius: 30px;
     z-index : 100;
-    top : -500px;
+    bottom : 10%;
     left: 50%;
     transform : translate(-50%, -50%);
 }

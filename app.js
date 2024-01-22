@@ -17,9 +17,10 @@ const mobileNavAbout = document.querySelector(".mobile-navigation-about");
 const mobileNavSupport = document.querySelector(".mobile-navigation-support");
 const footerLogoImage = document.querySelector(".footer-hodu-logo");
 
-const homePosition = document.querySelector("#header"). getBoundingClientRect().top + window.scrollY;;
-const mainPosition = document.querySelector("#main"). getBoundingClientRect().top + window.scrollY;
-const subscribePosition = document.querySelector(".subscribe-box"). getBoundingClientRect().top + window.scrollY;;
+const exceptModal = document.querySelectorAll("body > *:not(#modal)");
+
+const homePosition = document.querySelector("#header"). getBoundingClientRect().top + window.scrollY;
+const subscribePosition = document.querySelector(".subscribe-box"). getBoundingClientRect().top + window.scrollY;
 
 
 async function fetchImages(){
@@ -102,11 +103,14 @@ backToTopBtn.addEventListener('click', () => {
 
 subscribeBtn.addEventListener('click', () => {
     const emailForm = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-    console.log(document.querySelector(".input-email").value);
     const inputEmail = document.querySelector(".input-email").value;
+
     if(inputEmail.match(emailForm) != null) {
         modalWindow.style.display = 'block';
+        document.querySelector("body").style.overflow = "hidden";
+        exceptModal.forEach(function(e) {
+            e.style.filter = "saturate(10%)";
+        });
     } else {
         alert("Your email is invalid!");
         document.querySelector(".input-email").value = null;
@@ -116,6 +120,10 @@ subscribeBtn.addEventListener('click', () => {
 
 modalBtn.addEventListener('click', () => {
     modalWindow.style.display = 'none';
+    document.querySelector("body").style.overflow = "visible";
+    exceptModal.forEach(function(e) {
+        e.style.filter = "saturate(100%)";
+    });
 });
 
 mobileMenuBtn.addEventListener('click', () => {
