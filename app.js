@@ -20,6 +20,7 @@ const footerLogoImage = document.querySelector(".footer-hodu-logo");
 const exceptModal = document.querySelectorAll("body > *:not(#modal)");
 
 const homePosition = document.querySelector("#header"). getBoundingClientRect().top + window.scrollY;
+const mainPosition = document.querySelector("#main"). getBoundingClientRect().top + window.scrollY;
 const subscribePosition = document.querySelector(".subscribe-box"). getBoundingClientRect().top + window.scrollY;
 
 
@@ -38,8 +39,6 @@ async function fetchImages(){
 
 const infinityScroll = () => {
     if(document.body.clientHeight > (window.scrollY + window.innerHeight) * 0.5) {
-        console.log(document.body.clientHeight);
-        console.log((window.scrollY + window.innerHeight) * 0.5);
         fetchImages();
     }
 };
@@ -58,9 +57,11 @@ const throttling = (callback, delay) => {
 };
 
 function makeImageList(datas) {
-    datas.forEach((item) => {
-        imageList.innerHTML += "<img src=" + item.url + " alt=''>";
-    });
+    if(imageBox.style.display === "block") {
+        datas.forEach((item) => {
+            imageList.innerHTML += "<img src=" + item.url + " alt=''>";
+        });
+    }
 }
 
 navHome.addEventListener('click', () => {
