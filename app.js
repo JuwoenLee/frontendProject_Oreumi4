@@ -9,6 +9,7 @@ const imageBox = document.querySelector("#infinite-scroll");
 const mobileMenuBtn = document.querySelector(".btn-top-navigation-menu");
 const mobileSideMenu = document.querySelector(".mobile-navigation-bar");
 const mobileMenuCloseBtn = document.querySelector(".close-arrow");
+const navTopLogoImage = document.querySelector(".img-top-logo");
 const navHome = document.querySelector(".top-navigation-home");
 const navAbout = document.querySelector(".top-navigation-about");
 const navSupport = document.querySelector(".top-navigation-support");
@@ -19,10 +20,23 @@ const footerLogoImage = document.querySelector(".footer-hodu-logo");
 
 const exceptModal = document.querySelectorAll("body > *:not(#modal)");
 
-const homePosition = document.querySelector("#header"). getBoundingClientRect().top + window.scrollY;
-const mainPosition = document.querySelector("#main"). getBoundingClientRect().top + window.scrollY;
-const subscribePosition = document.querySelector(".subscribe-box"). getBoundingClientRect().top + window.scrollY;
+const mobileFooterAbout = document.querySelector(".footer-mobile-about");
+const mobileFooterBlog = document.querySelector(".footer-mobile-blog");
+const mobileFooterSupport = document.querySelector(".footer-mobile-support");
 
+mobileFooterAbout.addEventListener('click', () => {
+    const mainPosition = document.querySelector("#main"). getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({top : mainPosition, behavior : "smooth"});
+});
+
+mobileFooterBlog.addEventListener('click', () => {
+   window.open('https://www.notion.so/ko-kr');
+});
+
+mobileFooterSupport.addEventListener('click', () => {
+    const subscribePosition = document.querySelector(".subscribe-box"). getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({top : subscribePosition, behavior : "smooth"});
+});
 
 async function fetchImages(){
     try {
@@ -64,15 +78,22 @@ function makeImageList(datas) {
     });
 }
 
+navTopLogoImage.addEventListener('click', () => {
+    window.scrollTo({top : document.body.scrollHeight, behavior : "smooth"});
+});
+
 navHome.addEventListener('click', () => {
+    const homePosition = document.querySelector("#header"). getBoundingClientRect().top + window.scrollY;
     window.scrollTo({top : homePosition, behavior : "smooth"});
 });
 
 navAbout.addEventListener('click', () => {
+    const mainPosition = document.querySelector("#main"). getBoundingClientRect().top + window.scrollY;
     window.scrollTo({top : mainPosition, behavior : "smooth"});
 });
 
 navSupport.addEventListener('click', () => {
+    const subscribePosition = document.querySelector(".subscribe-box"). getBoundingClientRect().top + window.scrollY;
     window.scrollTo({top : subscribePosition, behavior : "smooth"});
 });
 
@@ -119,6 +140,10 @@ subscribeBtn.addEventListener('click', () => {
     }
 });
 
+footerLogoImage.addEventListener('click', () => {
+    window.scrollTo({top : 0, behavior : "smooth"});
+});
+
 modalBtn.addEventListener('click', () => {
     modalWindow.style.display = 'none';
     document.querySelector("body").style.overflow = "visible";
@@ -129,6 +154,10 @@ modalBtn.addEventListener('click', () => {
 
 mobileMenuBtn.addEventListener('click', () => {
     mobileSideMenu.style.display = "block";
+
+    const homePosition = document.querySelector("#header"). getBoundingClientRect().top + window.scrollY;
+    const mainPosition = document.querySelector("#main"). getBoundingClientRect().top + window.scrollY;
+    const subscribePosition = document.querySelector(".subscribe-box"). getBoundingClientRect().top + window.scrollY;
 
     mobileNavHome.addEventListener('click', () => {
         window.scrollTo({top : homePosition, behavior : "smooth"});
@@ -148,8 +177,6 @@ mobileMenuCloseBtn.addEventListener('click', () => {
     mobileSideMenu.style.display = "none";
 });
 
-footerLogoImage.addEventListener('click', () => {
-    window.scrollTo({top : 0, behavior : "smooth"});
-});
+
 
 

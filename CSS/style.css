@@ -838,10 +838,6 @@ button:hover:not(.btn-top-navigation-menu) {
         background-size: 100%;
     }
 
-    #modal .modal-inner-contents {
-        align-items: center;
-    }
-
     #modal img {
         width : 60px;
         height : 62px;
